@@ -1,14 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
-
-repo_description_lines_max: 2
+  - xiezhiyu01
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - pluslabnlp/ampere
+  - xiezhiyu01/My-Lecture-Notes
+  - xiezhiyu01/riscv-cpu
+  - xiezhiyu01/EDUKG
+  - xiezhiyu01/ray-tracing
+  - xiezhiyu01/snake-game
+  - xiezhiyu01/landlord-game
+  - xiezhiyu01/movie-site

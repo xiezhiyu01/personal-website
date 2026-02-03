@@ -1,56 +1,138 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  <!-- Head -->
   <head>
-    {% if page.redirect %}
-      {% if page.redirect == true %}
-        {% assign redirect = site.baseurl | append: '/' %}
-      {% elsif page.redirect contains '://' %}
-        {% assign redirect = page.redirect %}
-      {% else %}
-        {% assign redirect = page.redirect | relative_url %}
-      {% endif %}
-      <meta http-equiv="refresh" content="3; url={{ redirect }}">
-    {% endif %}
     {% include head.liquid %}
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+      /* 第一层：蓝色方块层 */
+      #intro-wrapper {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        pointer-events: none;
+        background-color: transparent;
+      }
+
+      #blue-square {
+        width: 15px; height: 15px;
+        background-color: #23afeb;
+        animation: slowExpandSquare 60s forwards cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      @keyframes slowExpandSquare {
+        0% { transform: scale(0); }
+        50% { transform: scale(5); }
+        80% { transform: scale(60); }
+        100% { transform: scale(700); }
+      }
+
+      #click-hint {
+        position: absolute;
+        color: white;
+        opacity: 0;
+        font-size: 0.75rem;
+        letter-spacing: 4px;
+        z-index: 10001;
+        transition: opacity 1s ease;
+        font-family: sans-serif;
+      }
+
+      /* 第二层：白色背景 Self Intro (无过渡直切) */
+      #final-white-page {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: #ffffff;
+        z-index: 10005;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #1a1a1a;
+        font-family: 'Lora', serif; /* 使用 Lora 衬线体 */
+      }
+
+      .intro-content {
+        text-align: center;
+        padding: 0 20px;
+      }
+      .intro-content .label { 
+        font-size: 0.65rem; 
+        letter-spacing: 5px; 
+        color: #bbb; 
+        margin-bottom: 30px; 
+        text-transform: uppercase; 
+      }
+      .intro-content h1 { 
+        font-size: 2.8rem; 
+        font-weight: 400; 
+        margin-bottom: 15px; 
+        letter-spacing: 2px;
+      }
+      .intro-content p { 
+        font-size: 1.05rem; 
+        color: #555; 
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+
+      #intro-wrapper.full-covered {
+        pointer-events: auto;
+        background-color: #23afeb;
+        cursor: pointer;
+      }
+      #intro-wrapper.full-covered #click-hint {
+        opacity: 0.7;
+      }
+    </style>
   </head>
 
-  <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
-    {% include header.liquid %}
-
-    <!-- Content -->
-    <div class="container mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-          </div>
-        {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
-        {% endif %}
-      {% else %}
-        {{ content }}
-      {% endif %}
+    
+    <div id="intro-wrapper">
+      <div id="blue-square"></div>
+      <div id="click-hint">ENTER</div>
     </div>
 
-    <!-- Footer -->
-    {% include footer.liquid %}
+    <div id="final-white-page">
+      <div class="intro-content">
+        <div class="label">About</div>
+        <h1>Zhiyu Xie</h1>
+        <p>Just a regular human being.</p>
+        <p>Thanks for stopping by.</p>
+      </div>
+    </div>
 
-    <!-- JavaScripts -->
+    {% include header.liquid %}
+    <div class="container mt-5" role="main">
+      {{ content }}
+    </div>
+    {% include footer.liquid %}
     {% include scripts.liquid %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const wrapper = document.getElementById('intro-wrapper');
+        const whitePage = document.getElementById('final-white-page');
+
+        // 60秒倒计时
+        setTimeout(() => {
+          wrapper.classList.add('full-covered');
+        }, 60000); 
+
+        wrapper.addEventListener('click', () => {
+          if (wrapper.classList.contains('full-covered')) {
+            whitePage.style.display = 'flex';
+            wrapper.style.display = 'none';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
