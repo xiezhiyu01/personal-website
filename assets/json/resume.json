@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Zhiyu Xie",
-    "email": "{fullname}@stanford.edu",
+    "email": "{lastname}{firstname}{2^15}@gmail.com",
     "url": "https://zhiyuxie.top/",
     "location": {
       "postalCode": "10001",
