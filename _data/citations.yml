@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-18'
 papers:
   IKQEsTsAAAAJ:2osOgNQ5qMEC:
     citations: 0
     title: 'TinyDFS: A Distributed File System'
     year: Unknown Year
   IKQEsTsAAAAJ:9yKSN-GCB0IC:
-    citations: 12
+    citations: 13
     title: 'A reevaluation of event extraction: Past, present, and future challenges'
     year: '2023'
   IKQEsTsAAAAJ:d1gkVwhDpl0C:
-    citations: 27
+    citations: 28
     title: 'TextEE: Benchmark, reevaluation, reflections, and future challenges in event extraction'
     year: '2024'
   IKQEsTsAAAAJ:qjMakFHDy7sC:
@@ -18,7 +18,7 @@ papers:
     title: Test-time adaptation in non-stationary environments via adaptive representation alignment
     year: '2024'
   IKQEsTsAAAAJ:u-x6o8ySG0sC:
-    citations: 56
+    citations: 57
     title: 'AMPERE: AMR-aware prefix for generation-based event argument extraction model'
     year: '2023'
   IKQEsTsAAAAJ:u5HHmVD_uO8C:
