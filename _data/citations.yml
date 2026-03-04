@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-18'
+  last_updated: '2026-03-04'
 papers:
   IKQEsTsAAAAJ:2osOgNQ5qMEC:
     citations: 0
@@ -10,7 +10,7 @@ papers:
     title: 'A reevaluation of event extraction: Past, present, and future challenges'
     year: '2023'
   IKQEsTsAAAAJ:d1gkVwhDpl0C:
-    citations: 28
+    citations: 30
     title: 'TextEE: Benchmark, reevaluation, reflections, and future challenges in event extraction'
     year: '2024'
   IKQEsTsAAAAJ:qjMakFHDy7sC:
@@ -18,10 +18,10 @@ papers:
     title: Test-time adaptation in non-stationary environments via adaptive representation alignment
     year: '2024'
   IKQEsTsAAAAJ:u-x6o8ySG0sC:
-    citations: 57
+    citations: 59
     title: 'AMPERE: AMR-aware prefix for generation-based event argument extraction model'
     year: '2023'
   IKQEsTsAAAAJ:u5HHmVD_uO8C:
-    citations: 41
+    citations: 42
     title: 'Manual evaluation matters: Reviewing test protocols of distantly supervised relation extraction'
     year: '2021'
