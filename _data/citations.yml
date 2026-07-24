@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-10'
+  last_updated: '2026-07-24'
 papers:
   IKQEsTsAAAAJ:2osOgNQ5qMEC:
     citations: 0
@@ -10,11 +10,11 @@ papers:
     title: 'A reevaluation of event extraction: Past, present, and future challenges'
     year: '2023'
   IKQEsTsAAAAJ:d1gkVwhDpl0C:
-    citations: 47
+    citations: 48
     title: 'TextEE: Benchmark, reevaluation, reflections, and future challenges in event extraction'
     year: '2024'
   IKQEsTsAAAAJ:qjMakFHDy7sC:
-    citations: 11
+    citations: 12
     title: Test-time adaptation in non-stationary environments via adaptive representation alignment
     year: '2024'
   IKQEsTsAAAAJ:u-x6o8ySG0sC:
