@@ -32,8 +32,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 Hi, I am Zhiyu Xie (谢芷钰).
 
-I completed my Master’s degree in Computer Science at Stanford University in June 2025.
-
-Before that, I graduated from Tsinghua University in June 2023 with a Bachelor's degree in Engineering, majoring in Computer Science and Technology.
+I am a quantitative software engineer at Cubist Systematic Strategies. 
+I obtained my Master’s degree in Computer Science at Stanford University in June 2025. Before that, I studied at Tsinghua University and graduated in June 2023 with a Bachelor's degree in Engineering, majoring in Computer Science and Technology.
 
 Welcome to my website.
